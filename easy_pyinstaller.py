@@ -1,5 +1,5 @@
 import os
-from rewpyint import rewrite
+from rewpyin import rewrite
 from _data import PYINST_PATH
 
 OPTION_FILE="_options.json"
