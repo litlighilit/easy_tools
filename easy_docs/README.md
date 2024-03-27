@@ -1,1 +1,1 @@
-core lies in "help()"
+GUI wrapper around `help()` builtin function
