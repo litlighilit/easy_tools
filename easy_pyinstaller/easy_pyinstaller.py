@@ -5,8 +5,16 @@ from subprocess import Popen
 
 from shutil import which
 
+
+def chk_which(name):
+    res = which(name)
+    if res is None:
+        raise FileNotFoundError("No {} executable found in your PATH".format(name)
+    return res
+
+
 NAME = "pyinstaller"
-PYINST_PATH = which(NAME)
+PYINST_PATH = chk_which(NAME)
 
 OPTION_FILE = "cmd_options.json"
 PACK_CNF = dict(fill="x", expand=True)
